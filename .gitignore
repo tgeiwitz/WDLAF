@@ -1,0 +1,12 @@
+# Environment
+.env
+
+# Logs (tracked separately, not in git)
+logs/
+knowledge_base/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
