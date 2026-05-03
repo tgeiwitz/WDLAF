@@ -17,8 +17,11 @@
 ├── wdlaf/
 │   ├── __init__.py
 │   ├── main.py                   # CLI entry point & chat loop
+│   ├── web.py                    # Flask web interface
 │   ├── chatbot.py                # Claude tool-use orchestration
-│   └── woodelivery.py            # WooDelivery API client
+│   ├── woodelivery.py            # WooDelivery API client
+│   └── static/
+│       └── index.html            # Chat web page
 ├── .env.example                  # Environment variable template
 ├── .gitignore
 ├── requirements.txt              # Python dependencies
@@ -38,7 +41,11 @@ pip install -r requirements.txt
 cp .env.example .env
 # Edit .env with your real keys
 
-# 4. Run the chatbot
+# 4. Run the web chatbot
+python -m wdlaf.web
+# Open http://localhost:5000 in your browser
+
+# Or run the CLI version instead
 python -m wdlaf.main
 ```
 
